@@ -3,8 +3,6 @@
 set -e
 set -o pipefail
 
-ROOT_PATH="$(dirname "$0")/.."
-
 # https://gist.github.com/DarrenN/8c6a5b969481725a4413
 PACKAGE_VERSION=$(grep 'version' package.json | cut -d '"' -f4 | tr -d '[[:space:]]')
 
