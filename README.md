@@ -17,6 +17,16 @@ If it's not working for your configuration or TypeScript version,
 please, [create an issue](./issues).
 
 
+## Features
+
+- provides `CompilerOptions` type that describes external compiler options as
+  they are specified in `tsconfig.json` file and in online documentation
+  with string enum values
+
+- provides `convertCompilerOptions` utility function that converts
+  compiler options from one format to another (both ways)
+
+
 ## Installation
 
 **As development dependency**
@@ -31,6 +41,77 @@ please, [create an issue](./issues).
 
 `typescript` package must be also installed in your project
 (we treat it as a peer dependency).
+
+
+## Usage
+
+```typescript
+
+import {
+  CompilerOptions,
+  convertCompilerOptions,
+  JsxEmit,
+  ModuleKind,
+  ModuleResolutionKind,
+  NewLineKind,
+  ScriptTarget,
+
+} from '@moebius/ts-compiler-options';
+
+const myOptions: CompilerOptions = {
+  jsx: JsxEmit.React,
+  module: ModuleKind.ES2015,
+  moduleResolution: ModuleResolutionKind.Classic,
+  newLine: NewLineKind.CarriageReturnLineFeed,
+  outDir: '/dist',
+  strict: true,
+  target: ScriptTarget.ES2018,
+};
+
+console.log({ myOptions });
+
+// Will produce:
+//
+// myOptions: {
+//   jsx: 'react',
+//   module: 'ES2015',
+//   moduleResolution: 'Classic',
+//   newLine: 'crlf',
+//   outDir: '/dist',
+//   strict: true,
+//   target: 'ES2018',
+// },
+//
+
+const convertedOptions = convertCompilerOptions(
+  'external-to-internal',
+  myOptions
+);
+
+console.log({ convertedOptions });
+
+// Will produce:
+//
+// convertedOptions: {
+//   jsx: 2,
+//   module: 5,
+//   moduleResolution: 1,
+//   newLine: 0,
+//   outDir: '/dist',
+//   strict: true,
+//   target: 5,
+// },
+//
+
+const internalOptions = convertCompilerOptions(
+  'internal-to-external',
+  convertedOptions
+);
+
+// Will produce the same result as in first example
+console.log({ internalOptions });
+
+```
 
 
 ## Support

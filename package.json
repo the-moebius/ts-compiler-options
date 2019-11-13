@@ -10,7 +10,8 @@
     "clean": "rm -rf ./dist/",
     "compile": "tsc",
     "lint": "tslint -p .",
-    "release": "./bin/publish.sh"
+    "release": "./bin/publish.sh",
+    "test": "jest"
   },
   "keywords": [
     "typescript",
@@ -26,8 +27,13 @@
     "typescript": "*"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "jest": "^24.9.0",
     "npm-run-all": "^4.1.5",
+    "ts-jest": "^24.1.0",
     "tslint": "^5.20.1",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.2",
+    "@types/node": "^12.12.7",
+    "ts-node": "^8.5.0"
   }
 }
