@@ -14,7 +14,7 @@ Typings in this module are based on both typings provided by TypeScript as
 well as [official documentation][compiler-options].
 
 If it's not working for your configuration or TypeScript version,
-please, [create an issue](./issues).
+please, [create an issue][create-issue].
 
 
 ## Features
@@ -148,4 +148,5 @@ THE SOFTWARE.
 
 
   [repo-gh]: https://github.com/moebius-mlm/ts-compiler-options
+  [create-issue]: https://github.com/moebius-mlm/ts-compiler-options/issues/new
   [compiler-options]: https://www.typescriptlang.org/docs/handbook/compiler-options.html
