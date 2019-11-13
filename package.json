@@ -1,6 +1,6 @@
 {
   "name": "@moebius/ts-compiler-options",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Typings for TypeScript compiler options",
   "author": "Slava Fomin II <slava@fomin.io> (https://slava.fomin.io)",
   "license": "MIT",

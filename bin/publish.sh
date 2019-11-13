@@ -13,7 +13,7 @@ echo "Running tests…"
 npm run test
 
 echo "Publishing the package to npm…"
-npm publish
+npm publish --access=public
 
 echo "Tagging the release…"
 git tag "v${PACKAGE_VERSION}"
