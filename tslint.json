@@ -1,0 +1,60 @@
+{
+  "extends": "tslint:recommended",
+  "defaultSeverity": "warning",
+  "rules": {
+    "no-import-side-effect": true,
+    "curly": true,
+    "max-line-length": false,
+    "indent": [true, "spaces"],
+    "space-before-function-paren": [true, "never"],
+    "quotemark": [true, "single"],
+    "no-consecutive-blank-lines": [true, 2],
+    "ordered-imports": true,
+    "member-access": false,
+    "object-literal-sort-keys": false,
+    "interface-name": false,
+    "member-ordering": [true, {
+      "order": [
+        "static-field",
+        "instance-field",
+        "static-method",
+        "constructor",
+        "instance-method"
+      ]
+    }],
+    "arrow-parens": false,
+    "only-arrow-functions": false,
+    "no-console": false,
+    "array-type": false,
+    "no-empty-interface": false,
+    "no-trailing-whitespace": false,
+    "comment-format": false,
+    "no-empty": false,
+    "ban-types": false,
+    "unified-signatures": false,
+    "no-angle-bracket-type-assertion": false,
+    "callable-types": false,
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-module",
+      "check-operator",
+      "check-separator",
+      "check-type"
+    ],
+    "no-require-imports": true,
+    "no-irregular-whitespace": true,
+    "trailing-comma": [true, {"multiline": {
+      "arrays": "always",
+      "exports": "always",
+      "functions": "never",
+      "imports": "always",
+      "objects": "always",
+      "typeLiterals": "always"
+    }}],
+    "no-access-missing-member": false,
+    "semicolon": [true, "always"],
+    "import-spacing": true
+  }
+}
