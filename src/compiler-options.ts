@@ -47,7 +47,7 @@ export type EnumFields = (
   'moduleResolution' |
   'newLine' |
   'target'
-  );
+);
 
 export interface CompilerOptions extends Omit<TSCompilerOptions, EnumFields> {
   jsx?: JsxEmit;
